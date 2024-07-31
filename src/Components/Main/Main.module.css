@@ -1,0 +1,104 @@
+.main_container {
+    background-color: var(--Light);
+    color: var(--Dark);
+    height: auto;
+    width: 100vw;
+    top: 75px;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_container h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.asu_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.pac12_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 65px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+.small_logos {
+    width: 40px;
+    object-fit: contain;
+}
+
+.main_container h3 {
+    margin: 20px 10px;
+}
+ 
+.main_container h4 {
+    width: 100%;
+    text-align: center;
+    font-family: var(--ITSemiBold);
+    margin-bottom: 20px;
+}
+
+.secondary {
+    margin: 40px 0px;
+    text-align: center;
+}
+
+.disclaimer {
+    width: 100%;
+}
+
+.button {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--Transition);
+    background-color: var(--Mint);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.appText {
+    margin-right: 5px;
+}
+
+.button:hover {
+    background-color: var(--BrightPurple);
+    color: #ffffff;
+    transition: var(--Transition);
+}
+
+.button h4 {
+    margin: 0;
+}
+
+#business {
+    transition: var(--Transition);
+}
+
+#business:hover {
+    transition: var(--Transition);
+    color: var(--BrightPurple);
+}

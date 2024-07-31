@@ -1,0 +1,113 @@
+.container { 
+    height: 75px;
+    width: 100%;
+    background: var(--Dark);
+    color: var(--Light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    padding: 10px;
+    z-index: 1;
+}
+
+.nav_logo {
+    width: 25px;
+    background-size: contain;
+    margin-right: 5px;
+}
+
+.title {
+    font-family: var(--ITSemiBold);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Original place for .menuButton, it's hover state and .menuText */
+.menuButton {
+    display: none;
+}
+
+.schedule {
+    position: absolute;
+    right: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--Transition);
+    background-color: var(--Mint);
+    color: var(--Dark);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.appText {
+    margin-right: 5px;
+}
+
+.schedule:hover {
+    background-color: var(--BrightPurple);
+    color: #ffffff;
+    transition: var(--Transition);
+}
+
+@media screen and (max-width: 960px) {
+
+
+    .menuButton {
+        height: auto;
+        width: auto;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 10px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+
+    .menuButton:hover {
+        color: var(--BrightPurple);
+        transition: .3s ease-in-out;
+    }
+
+    .menuText {
+        margin-left: 7px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    /* .menuButton {
+        width: 90px;
+    } */
+
+    .appText {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title h2 {
+        font-size: 20px;
+    }
+
+    /* .menuButton {
+        width: 70px;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
+
+    .menuText {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .title h2 {
+        font-size: 16px;
+    }
+}
