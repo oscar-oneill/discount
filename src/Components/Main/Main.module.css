@@ -17,6 +17,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .asu_container {
@@ -29,7 +30,7 @@
 
 }
 
-.pac12_container {
+.container_one {
     width: 100%;
     display: flex;
     align-items: center;
@@ -43,13 +44,22 @@
     margin-top: 10px;
 }
 
-.small_logos {
-    width: 40px;
+.logo_container_one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.logo2 {
+    width: 100px;
     object-fit: contain;
+    margin: 10px 20px;
 }
 
 .main_container h3 {
     margin: 20px 10px;
+    width: 80%;
 }
  
 .main_container h4 {
@@ -66,6 +76,7 @@
 
 .disclaimer {
     width: 100%;
+    margin-top: 20px;
 }
 
 .button {

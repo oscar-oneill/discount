@@ -1,5 +1,21 @@
+/* eslint-disable react/prop-types */
 import main from './Main.module.css'
-import { pac12 } from '../../utils/photos'
+import { pac12, hospitals, newyork } from '../../utils/photos'
+
+const Affiliations = ({ institutions, memo }) => {
+    return (
+        <div className={main.container_one}>
+            <h3>{memo}</h3>
+            <div className={main.logo_container_one}>
+                { institutions && institutions.map((institution, i) => {
+                    return (
+                        <img key={i} className={main.logo2} src={institution} alt='logo'/>  
+                    )
+                }) }
+            </div>
+        </div>
+    )
+}
 
 const Button = () => {
     return ( 
@@ -10,31 +26,45 @@ const Button = () => {
     )
 }
 
+const ArizonaState = () => {
+    return (
+        <div className={main.asu_container}>
+            <h3>{`Can't leave out that one school in Tempe. If you're an Arizona State University alum, you can also enjoy a $25 discount on eligible services. Now how do you like that for innovation? Forks Up, Sun Devils!`}</h3>
+            <img className={main.logo} src={pac12.asu} alt='school logo'/>
+        </div> 
+    )
+}
+
+const health = `Healthcare professionals & hospital employees at any of the following networks can enjoy a $30 discount on eligible services.`
+const school = `Students, alumni, faculty, and employees from any of the following colleges and universities can enjoy a $25 discount on eligible services.`
+
+// Primary Component
 const Main = () => {
     return (
         <div className={main.main_container}>
             <h1>Discounts For You!</h1>
+            <Affiliations
+                institutions={hospitals}
+                memo={health}
+            />
 
-            <div className={main.asu_container}>
-                <img className={main.logo} src={pac12.asu} alt='school logo'/>
-                <h3>Arizona State University alums can enjoy a $30 discount on eligible services all year round, no matter what. <br/> <br/> How do you like that for innovation? Forks up, Sun Devils!</h3>
-            </div>
+            <br/><br/>
 
-            <div className={main.pac12_container}>
-                <img className={main.logo} src={pac12.pac12} alt='school logo'/>
-                <h3>{`The Pac-12 may be over as we know it. How about a $15 discount for those people who have gone to these schools:`}</h3>
-                <h4>University of Arizona, University of California-Berkeley, UCLA, University of Colorado, University of Oregon, Oregon State University, USC, Stanford University, University of Utah, University of Washigton & Washington State University</h4>
-            </div>
+            <Affiliations
+                institutions={newyork}
+                memo={school}
+            />
 
+            <br/><br/>
 
-            <div className={main.secondary}>
-                <h2>{`Check back soon for more discounts!`}</h2>
-            </div>
-
+            <ArizonaState/>
 
             <div className={main.disclaimer}>
-                <h4>{`*Discounts cannot be used for Studio Cleaning, Individual Residential Cleaning, or any additional cleaning add-ons.`}</h4>
-                <h4>{`*Attendees of the colleges and universities listed above will have to show proof of attendance by emailing a photo of your school id indicating student status, or a copy of your transcript. Names on transcripts must match the client name when booking cleaning services to be eligible. Please email credentials to `}<a id={main.business} href='mailTo:business@thecleaningcompany.xyz'>business@thecleaningcompany.xyz</a></h4>
+                <h4>{`Limit 2 discounts per calendar year, per address.`}</h4>
+                <h4>{`Discounts cannot be used for Studio Cleaning, Individual Residential Cleaning options, or any additional cleaning add-ons. Cannot be combined with any other discounts.`}</h4>
+                <h4>{`Employees of the hospital networks listed above must show proof of employment (an employee id will do just fine). Names on id's must match the client's name who is booking cleaning service to be eligible. Please email credentials to `}<a id={main.business} href='mailTo:business@thecleaningcompany.xyz'>business@thecleaningcompany.xyz</a></h4>
+                <h4>{`Attendees of the colleges and universities listed above must show proof of attendance or employment by emailing a photo of your employment/student id, or a copy of your transcript with grades and personal information redacted. Names on transcripts, id cards and employee id's must match the client's name who is booking cleaning service to be eligible. Please email credentials to `}<a id={main.business} href='mailTo:business@thecleaningcompany.xyz'>business@thecleaningcompany.xyz</a></h4>
+                <h4>{`All CUNY and SUNY campuses are eligible for discounts.`}</h4>
             </div>
 
             <Button/>
