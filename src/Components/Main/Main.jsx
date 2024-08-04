@@ -60,7 +60,7 @@ const Main = () => {
             <ArizonaState/>
 
             <div className={main.disclaimer}>
-                <h4>{`Limit 2 discounts per calendar year, per address.`}</h4>
+                <h4>{`Limit 2 discounts per customer.`}</h4>
                 <h4>{`Discounts cannot be used for Studio Cleaning, Individual Residential Cleaning options, or any additional cleaning add-ons. Cannot be combined with any other discounts.`}</h4>
                 <h4>{`Employees of the hospital networks listed above must show proof of employment (an employee id will do just fine). Names on id's must match the client's name who is booking cleaning service to be eligible. Please email credentials to `}<a id={main.business} href='mailTo:business@thecleaningcompany.xyz'>business@thecleaningcompany.xyz</a></h4>
                 <h4>{`Attendees of the colleges and universities listed above must show proof of attendance or employment by emailing a photo of your employment/student id, or a copy of your transcript with grades and personal information redacted. Names on transcripts, id cards and employee id's must match the client's name who is booking cleaning service to be eligible. Please email credentials to `}<a id={main.business} href='mailTo:business@thecleaningcompany.xyz'>business@thecleaningcompany.xyz</a></h4>
